@@ -1,0 +1,2 @@
+TestAssembly:testAddAssembly() (gas: 5424)
+TestAssembly:testAddSolidity() (gas: 5578)
