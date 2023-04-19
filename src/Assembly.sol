@@ -23,4 +23,31 @@ contract Assembly {
         uint256 result = x;
         return result;
     }
+    function sumSolidity(uint256[] memory data) public pure returns (uint256 sum) {
+        for (uint256 i=0; i<data.length; ++i){
+            unchecked{
+                sum += data[i];
+            }
+        }
+    }
+    function sumHalfAssembly(uint256[] memory data) public pure returns (uint256 sum) {
+        for (uint256 i=0; i<data.length; ++i){
+            assembly{
+                sum := add(sum, mload(add(add(data, 0x20), mul(i, 0x20))))
+            }
+        }
+    }
+    function sumAssembly(uint256[] memory data) public pure returns (uint256 sum){
+        assembly{
+            let len := mload(data)
+            let dataElementLocation := add(data, 0x20)
+            for
+                { let end := add(dataElementLocation, mul(len, 0x20)) }
+                lt(dataElementLocation, end)
+                { dataElementLocation := add(dataElementLocation, 0x20) }
+            {
+                sum := add(sum, mload(dataElementLocation))
+            }
+        }
+    }
 }
