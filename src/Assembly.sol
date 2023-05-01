@@ -10,7 +10,9 @@ contract Assembly {
         }
     }
     function addTestSolidity(uint256 x, uint256 y) public pure returns(uint256){
+      unchecked{
         return x + y;
+      }
     }
     function setWithAssembly(uint256 x) public pure returns (uint256){
         assembly{

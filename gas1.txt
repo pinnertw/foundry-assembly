@@ -1,5 +1,5 @@
-TestAssembly:testFuzz_AddAssembly(uint256,uint256) (runs: 256, μ: 5690, ~: 5690)
-TestAssembly:testFuzz_AddSolidity(uint256,uint256) (runs: 256, μ: 9086, ~: 9086)
+TestAssembly:testFuzz_AddAssembly(uint256,uint256) (runs: 256, μ: 5702, ~: 5702)
+TestAssembly:testFuzz_AddSolidity(uint256,uint256) (runs: 256, μ: 5713, ~: 5713)
 TestAssembly:testFuzz_SetAssembly(uint256) (runs: 256, μ: 5610, ~: 5610)
 TestAssembly:testFuzz_SetSolidity(uint256) (runs: 256, μ: 5621, ~: 5621)
 TestAssembly:testFuzz_sumAssembly(uint256[]) (runs: 256, μ: 43981, ~: 44705)
